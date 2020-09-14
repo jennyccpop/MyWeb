@@ -1,0 +1,77 @@
+body {
+    background: #ffffff;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+	/*設定div樣式的整體佈局*/
+	.page-icon{
+		margin:20px 0 0 0;/*設定距離頂部20畫素*/
+		font-size:0;/*修復行內元素之間空隙間隔*/
+    text-align:center;/*設定內容居中顯示*/
+    position:absolute;
+    left:auto;
+    right:41%;
+	}
+	
+	/*設定共有的的樣式佈局，主要是進行程式碼優化，提高執行效率*/
+	.page-icon a,.page-disabled,.page-next{
+		border:1px #ccc;
+		border-radius:3px;
+		padding:4px 10px 5px;
+		font-size:14PX;/*修復行內元素之間空隙間隔*/
+		margin-right:10px;
+	}
+	
+	/*對 a 標籤進行樣式佈局 */
+	.page-icon a{
+		text-decoration:none;/*取消連結的下劃線*/
+		color:black;
+	}
+	
+	.page-current{
+    color:black;
+    background-color: #ff6600;
+    width:80px;height:80px; 
+    border-radius:999em;
+		padding:4px 10px 5px;
+    font-size:14PX;
+    margin-right:10px;
+	}
+	
+	.page-disabled{
+		color:#ccc;
+	}
+	
+	.page-next i,.page-disabled i{
+		cursor:pointer;/*設定滑鼠經過時的顯示狀態，這裡設定的是顯示狀態為小手狀態*/
+		display:inline-block;/*設定顯示的方式為行內塊元素*/
+		width:5px;
+		height:9px;
+	}
+	.page-disabled i{
+		background-position:-80px -608px;
+		margin-right:3px;
+	}
+
+	.page-next i{
+		background-position:-62px -608px;
+		margin-left:3px;
+	}
+
+/* 改變箭頭顏色 */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: black;
+}
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: black;
+}
